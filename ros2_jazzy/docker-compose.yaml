@@ -1,0 +1,22 @@
+services:
+  jazzy-ws-srv:
+    container_name: jazzy-ws
+    build:
+      context: .
+      args:
+        C_USER: ${USER}
+        C_UID: 1000
+        C_GID: 1000
+    image: jazzy-ws:dev
+    stdin_open: true
+    tty: true
+    volumes:
+      - ${HOME}/dev/ros2_ws:/home/${USER}/ws
+      - ${HOME}/.ssh:/home/${USER}/.ssh
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    working_dir: /home/${USER}/ws
+    restart: unless-stopped
+    network_mode: host
+    privileged: true
+    environment:
+      - DISPLAY=${DISPLAY}
