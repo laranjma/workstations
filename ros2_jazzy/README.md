@@ -25,3 +25,10 @@ Stop a running contrainer:
 docker compose down -v
 ```
 
+## TODO
+
+Packages to install:
+
+- vim
+- tree
+
