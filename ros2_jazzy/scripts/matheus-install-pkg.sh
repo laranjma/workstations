@@ -68,6 +68,11 @@ fi
 if [ -f /ws/install/setup.zsh ]; then
   source /ws/install/setup.zsh
 fi
+
+# Prompt customization
+WS_PREFIX='%B%F{white}WS%f%b ' # bold white "WS" prefix
+PROMPT="${WS_PREFIX}${PROMPT}"
+
 EOF
 fi
 

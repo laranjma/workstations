@@ -11,7 +11,7 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - ${HOME}/dev/ros2_ws:/home/${USER}/ws
+      - ${HOME}/dev/workspaces/ros2_ws:/home/${USER}/ws
       - ${HOME}/.ssh:/home/${USER}/.ssh
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     working_dir: /home/${USER}/ws
