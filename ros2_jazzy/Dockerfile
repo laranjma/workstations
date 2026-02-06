@@ -73,5 +73,5 @@ RUN chmod +x /usr/local/bin/${C_USER}-install-pkg.sh
 USER ${C_USER}
 RUN /usr/local/bin/${C_USER}-install-pkg.sh
 
-WORKDIR /ws
+WORKDIR /ros2_ws
 CMD ["zsh"]

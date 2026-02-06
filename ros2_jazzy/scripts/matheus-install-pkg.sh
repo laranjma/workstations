@@ -65,8 +65,8 @@ if [ -f /opt/ros/jazzy/setup.zsh ]; then
 fi
 
 # Workspace overlay
-if [ -f /ws/install/setup.zsh ]; then
-  source /ws/install/setup.zsh
+if [ -f /home/${USER}/ros2_ws/install/setup.zsh ]; then
+  source /home/${USER}/ros2_ws/install/setup.zsh
 fi
 
 # Prompt customization
